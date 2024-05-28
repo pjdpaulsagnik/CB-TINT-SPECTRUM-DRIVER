@@ -6,6 +6,12 @@ allprojects {
     }
 }
 
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.0'
+    }
+}
+
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
@@ -38,9 +44,9 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.example'
+            groupId = 'com.cbtint'
             artifactId = 'spectrumdriver'
-            version = '1.0.0'
+            version = '3.0.0'
 
             artifact("spectrumdriver-release.aar")
 
